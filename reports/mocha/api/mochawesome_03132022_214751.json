@@ -1,0 +1,574 @@
+{
+  "stats": {
+    "suites": 13,
+    "tests": 13,
+    "passes": 13,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-03-13T21:47:44.191Z",
+    "end": "2022-03-13T21:47:51.442Z",
+    "duration": 7251,
+    "testsRegistered": 13,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "25de45ab-f92d-45e2-97b5-89cac4761b3a",
+      "title": "",
+      "fullFile": "",
+      "file": "",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "1498d7f5-0ebf-4101-80ed-2cb609caa188",
+          "title": "Verify POST Login api endpoint",
+          "fullFile": "/tests/api/auth/post.loginUser.api.spec.ts",
+          "file": "/api/auth/post.loginUser.api.spec.ts",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should fetch login token",
+              "fullTitle": "Verify POST Login api endpoint should fetch login token",
+              "timedOut": false,
+              "duration": 669,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "return __awaiter(void 0, void 0, void 0, function () {\n            var loginUser, loginResponse;\n            return __generator(this, function (_a) {\n                switch (_a.label) {\n                    case 0:\n                        loginUser = {\n                            email: 'eve.holt@reqres.in',\n                            password: 'cityslicka'\n                        };\n                        return [4 /*yield*/, (0, apiUtil_1.loginUserApiRequest)(loginUser)];\n                    case 1:\n                        loginResponse = _a.sent();\n                        softExpect(loginResponse.status).to.be.eql(200);\n                        softExpect(loginResponse.data.token).to.be.not.undefined;\n                        (0, soft_assert_1.flush)();\n                        return [2 /*return*/];\n                }\n            });\n        });",
+              "err": {},
+              "uuid": "05f2277c-a5ff-4f0d-9a72-08b79b700c06",
+              "parentUUID": "1498d7f5-0ebf-4101-80ed-2cb609caa188",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "05f2277c-a5ff-4f0d-9a72-08b79b700c06"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 669,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 5000
+        },
+        {
+          "uuid": "a438743c-298b-4061-9a80-1cb41c9c0560",
+          "title": "Verify HTTP DELETE method by using delete user api endpoint",
+          "fullFile": "/tests/api/httpMethods/delete.deleteUser.api.spec.ts",
+          "file": "/api/httpMethods/delete.deleteUser.api.spec.ts",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should delete an existing user using delete http method",
+              "fullTitle": "Verify HTTP DELETE method by using delete user api endpoint should delete an existing user using delete http method",
+              "timedOut": false,
+              "duration": 594,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "return __awaiter(void 0, void 0, void 0, function () {\n            var authCreds, allUsersPageResponse, allUsersList, id, deleteUserResponse;\n            return __generator(this, function (_a) {\n                switch (_a.label) {\n                    case 0:\n                        authCreds = {\n                            username: 'eve.holt@reqres.in',\n                            password: 'cityslicka'\n                        };\n                        return [4 /*yield*/, (0, apiUtil_1.getAllUsersApiRequest)(authCreds)];\n                    case 1:\n                        allUsersPageResponse = _a.sent();\n                        softExpect(allUsersPageResponse).to.be.not.undefined;\n                        allUsersList = allUsersPageResponse.data.data;\n                        id = allUsersList[0].id;\n                        return [4 /*yield*/, (0, apiUtil_1.deleteApiRequest)(\"\".concat(apiUtil_1.userEndpoint, \"/\").concat(id), authCreds)];\n                    case 2:\n                        deleteUserResponse = _a.sent();\n                        softExpect(deleteUserResponse.status).to.be.eql(204);\n                        softExpect(deleteUserResponse.data).to.be.eql('');\n                        (0, soft_assert_1.flush)();\n                        return [2 /*return*/];\n                }\n            });\n        });",
+              "err": {},
+              "uuid": "3a59315e-f000-4a0a-8c5e-83003bb72ff0",
+              "parentUUID": "a438743c-298b-4061-9a80-1cb41c9c0560",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "3a59315e-f000-4a0a-8c5e-83003bb72ff0"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 594,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 5000
+        },
+        {
+          "uuid": "c53be4fd-b767-4652-b8fe-85ebeb727db6",
+          "title": "Verify HTTP GET using get all users api endpoint",
+          "fullFile": "/tests/api/httpMethods/get.getUsers.api.spec.ts",
+          "file": "/api/httpMethods/get.getUsers.api.spec.ts",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should fetch all the available users with auth login token",
+              "fullTitle": "Verify HTTP GET using get all users api endpoint should fetch all the available users with auth login token",
+              "timedOut": false,
+              "duration": 776,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "return __awaiter(void 0, void 0, void 0, function () {\n            var loginResponse, allUsersPageResponse;\n            return __generator(this, function (_a) {\n                switch (_a.label) {\n                    case 0: return [4 /*yield*/, (0, apiUtil_1.loginUserApiRequest)({\n                            email: 'eve.holt@reqres.in',\n                            password: 'cityslicka'\n                        })];\n                    case 1:\n                        loginResponse = _a.sent();\n                        return [4 /*yield*/, (0, apiUtil_1.getAllUsersApiRequest)(loginResponse.data.token)];\n                    case 2:\n                        allUsersPageResponse = _a.sent();\n                        verifyGetUsers(allUsersPageResponse);\n                        return [2 /*return*/];\n                }\n            });\n        });",
+              "err": {},
+              "uuid": "a4c751eb-08e2-4e78-a20b-234edbc47cb3",
+              "parentUUID": "c53be4fd-b767-4652-b8fe-85ebeb727db6",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should fetch all the available users with basic auth",
+              "fullTitle": "Verify HTTP GET using get all users api endpoint should fetch all the available users with basic auth",
+              "timedOut": false,
+              "duration": 222,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "return __awaiter(void 0, void 0, void 0, function () {\n            var authCreds, allUsersPageResponse;\n            return __generator(this, function (_a) {\n                switch (_a.label) {\n                    case 0:\n                        authCreds = {\n                            username: 'eve.holt@reqres.in',\n                            password: 'cityslicka'\n                        };\n                        return [4 /*yield*/, (0, apiUtil_1.getAllUsersApiRequest)(authCreds)];\n                    case 1:\n                        allUsersPageResponse = _a.sent();\n                        verifyGetUsers(allUsersPageResponse);\n                        return [2 /*return*/];\n                }\n            });\n        });",
+              "err": {},
+              "uuid": "196a1e0c-5c24-4922-b73c-7f23b90f293f",
+              "parentUUID": "c53be4fd-b767-4652-b8fe-85ebeb727db6",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "a4c751eb-08e2-4e78-a20b-234edbc47cb3",
+            "196a1e0c-5c24-4922-b73c-7f23b90f293f"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 998,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 5000
+        },
+        {
+          "uuid": "ef24c24e-bbc9-42a5-b540-5548345de5f2",
+          "title": "Verify HTTP PATCH by updating user api endpoint",
+          "fullFile": "/tests/api/httpMethods/patch.updateUser.api.spec.ts",
+          "file": "/api/httpMethods/patch.updateUser.api.spec.ts",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should update an existing user using patch http method",
+              "fullTitle": "Verify HTTP PATCH by updating user api endpoint should update an existing user using patch http method",
+              "timedOut": false,
+              "duration": 780,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "return __awaiter(void 0, void 0, void 0, function () {\n            var authCreds, allUsersPageResponse, allUsersList, _a, name, oldJob, newJob, patchData, updateUserResponse, today;\n            return __generator(this, function (_b) {\n                switch (_b.label) {\n                    case 0:\n                        authCreds = {\n                            username: 'eve.holt@reqres.in',\n                            password: 'cityslicka'\n                        };\n                        return [4 /*yield*/, (0, apiUtil_1.getAllUsersApiRequest)(authCreds)];\n                    case 1:\n                        allUsersPageResponse = _b.sent();\n                        allUsersList = allUsersPageResponse.data.data;\n                        _a = allUsersList[1], name = _a.name, oldJob = _a.job;\n                        newJob = 'software developer';\n                        patchData = {\n                            name: name,\n                            job: newJob\n                        };\n                        return [4 /*yield*/, (0, apiUtil_1.patchApiRequest)(apiUtil_1.userEndpoint, patchData, authCreds)];\n                    case 2:\n                        updateUserResponse = _b.sent();\n                        softExpect(updateUserResponse.status).to.be.eql(200);\n                        softExpect(updateUserResponse.data).to.be.not.undefined;\n                        softExpect(updateUserResponse.data.updatedAt).to.be.not.undefined;\n                        softExpect(updateUserResponse.data.name).to.be.eql(name);\n                        softExpect(updateUserResponse.data.job).to.be.not.eql(oldJob);\n                        softExpect(updateUserResponse.data.job).to.be.eql(newJob);\n                        today = \"\".concat(new Date().toISOString()).split('T')[0];\n                        softExpect(updateUserResponse.data.updatedAt).to.contains(today);\n                        (0, soft_assert_1.flush)();\n                        return [2 /*return*/];\n                }\n            });\n        });",
+              "err": {},
+              "uuid": "1cc459f6-ea78-4189-9568-4ecee3b4ae34",
+              "parentUUID": "ef24c24e-bbc9-42a5-b540-5548345de5f2",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "1cc459f6-ea78-4189-9568-4ecee3b4ae34"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 780,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 5000
+        },
+        {
+          "uuid": "f6551f2f-618b-442f-b47f-6fdae2638335",
+          "title": "Verify HTTP POST create user api endpoint",
+          "fullFile": "/tests/api/httpMethods/post.createUser.api.spec.ts",
+          "file": "/api/httpMethods/post.createUser.api.spec.ts",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should fetch token for successful login",
+              "fullTitle": "Verify HTTP POST create user api endpoint should fetch token for successful login",
+              "timedOut": false,
+              "duration": 448,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "return __awaiter(void 0, void 0, void 0, function () {\n            var authCreds, name, job, postData, createUserResponse, today;\n            return __generator(this, function (_a) {\n                switch (_a.label) {\n                    case 0:\n                        authCreds = {\n                            username: 'eve.holt@reqres.in',\n                            password: 'cityslicka'\n                        };\n                        name = (0, core_1.newUserData)().name;\n                        job = 'leader';\n                        postData = {\n                            name: name,\n                            job: job\n                        };\n                        return [4 /*yield*/, (0, apiUtil_1.postApiRequest)(apiUtil_1.userEndpoint, postData, authCreds)];\n                    case 1:\n                        createUserResponse = _a.sent();\n                        softExpect(createUserResponse.status).to.be.eql(201);\n                        softExpect(createUserResponse.data).to.be.not.undefined;\n                        softExpect(createUserResponse.data.id).to.be.not.undefined;\n                        softExpect(createUserResponse.data.createdAt).to.be.not.undefined;\n                        softExpect(createUserResponse.data.name).to.be.eql(name);\n                        softExpect(createUserResponse.data.job).to.be.eql(job);\n                        today = \"\".concat(new Date().toISOString()).split('T')[0];\n                        softExpect(createUserResponse.data.createdAt).to.contains(today);\n                        (0, soft_assert_1.flush)();\n                        return [2 /*return*/];\n                }\n            });\n        });",
+              "err": {},
+              "uuid": "49c3b2f4-8e4a-4024-8df2-415c3eb19436",
+              "parentUUID": "f6551f2f-618b-442f-b47f-6fdae2638335",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "49c3b2f4-8e4a-4024-8df2-415c3eb19436"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 448,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 5000
+        },
+        {
+          "uuid": "0cf8ccc7-e4e9-44ba-ac30-1feb71b5ad8b",
+          "title": "Verify HTTP POST register user api endpoint",
+          "fullFile": "/tests/api/httpMethods/post.registerUser.api.spec.ts",
+          "file": "/api/httpMethods/post.registerUser.api.spec.ts",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should receive error message for unsuccessful registration",
+              "fullTitle": "Verify HTTP POST register user api endpoint should receive error message for unsuccessful registration",
+              "timedOut": false,
+              "duration": 435,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "return __awaiter(void 0, void 0, void 0, function () {\n            var authCreds, email, postData, registerUserResponse;\n            return __generator(this, function (_a) {\n                switch (_a.label) {\n                    case 0:\n                        authCreds = {\n                            username: 'eve.holt@reqres.in',\n                            password: 'cityslicka'\n                        };\n                        email = (0, core_1.newUserData)().email;\n                        postData = {\n                            email: email\n                        };\n                        return [4 /*yield*/, (0, apiUtil_1.postApiRequest)(apiUtil_1.registerEndpoint, postData, authCreds)];\n                    case 1:\n                        registerUserResponse = _a.sent();\n                        softExpect(registerUserResponse.status).to.be.eql(400);\n                        softExpect(registerUserResponse.data).to.be.not.undefined;\n                        softExpect(registerUserResponse.data.error).to.be.not.undefined;\n                        softExpect(registerUserResponse.data.error).to.be.eql('Missing password');\n                        (0, soft_assert_1.flush)();\n                        return [2 /*return*/];\n                }\n            });\n        });",
+              "err": {},
+              "uuid": "87a64fe5-f205-48d8-815f-d9f1e1f3ad20",
+              "parentUUID": "0cf8ccc7-e4e9-44ba-ac30-1feb71b5ad8b",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "87a64fe5-f205-48d8-815f-d9f1e1f3ad20"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 435,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 5000
+        },
+        {
+          "uuid": "ec1a78ab-5a86-4037-b1e6-a68587331f74",
+          "title": "Verify HTTP PUT method by updating update user api endpoint",
+          "fullFile": "/tests/api/httpMethods/put.updateUser.api.spec.ts",
+          "file": "/api/httpMethods/put.updateUser.api.spec.ts",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should update an existing user using put http method",
+              "fullTitle": "Verify HTTP PUT method by updating update user api endpoint should update an existing user using put http method",
+              "timedOut": false,
+              "duration": 514,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "return __awaiter(void 0, void 0, void 0, function () {\n            var authCreds, allUsersPageResponse, allUsersList, _a, name, oldJob, newJob, putData, updateUserResponse, today;\n            return __generator(this, function (_b) {\n                switch (_b.label) {\n                    case 0:\n                        authCreds = {\n                            username: 'eve.holt@reqres.in',\n                            password: 'cityslicka'\n                        };\n                        return [4 /*yield*/, (0, apiUtil_1.getAllUsersApiRequest)(authCreds)];\n                    case 1:\n                        allUsersPageResponse = _b.sent();\n                        allUsersList = allUsersPageResponse.data.data;\n                        _a = allUsersList[0], name = _a.name, oldJob = _a.job;\n                        newJob = 'software developer';\n                        putData = {\n                            name: name,\n                            job: newJob\n                        };\n                        return [4 /*yield*/, (0, apiUtil_1.putApiRequest)(apiUtil_1.userEndpoint, putData, authCreds)];\n                    case 2:\n                        updateUserResponse = _b.sent();\n                        /* eslint-enable */\n                        softExpect(updateUserResponse.status).to.be.eql(200);\n                        softExpect(updateUserResponse.data).to.be.not.undefined;\n                        softExpect(updateUserResponse.data.updatedAt).to.be.not.undefined;\n                        softExpect(updateUserResponse.data.name).to.be.eql(name);\n                        softExpect(updateUserResponse.data.job).to.be.not.eql(oldJob);\n                        softExpect(updateUserResponse.data.job).to.be.eql(newJob);\n                        today = \"\".concat(new Date().toISOString()).split('T')[0];\n                        softExpect(updateUserResponse.data.updatedAt).to.contains(today);\n                        (0, soft_assert_1.flush)();\n                        return [2 /*return*/];\n                }\n            });\n        });",
+              "err": {},
+              "uuid": "3a6956fa-aa48-446d-bb63-a1c7023a1d6b",
+              "parentUUID": "ec1a78ab-5a86-4037-b1e6-a68587331f74",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "3a6956fa-aa48-446d-bb63-a1c7023a1d6b"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 514,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 5000
+        },
+        {
+          "uuid": "bec72ad6-f13b-43ed-9e65-9d5cf4389586",
+          "title": "Verify HTTP Status",
+          "fullFile": "/tests/api/httpStatus/httpStatus.api.spec.ts",
+          "file": "/api/httpStatus/httpStatus.api.spec.ts",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [],
+          "suites": [
+            {
+              "uuid": "cb20804b-cd06-4f71-a382-0712222d0b63",
+              "title": "Verify 200 HTTP Status",
+              "fullFile": "/tests/api/httpStatus/httpStatus.api.spec.ts",
+              "file": "/api/httpStatus/httpStatus.api.spec.ts",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "should fetch all the available users with auth login token",
+                  "fullTitle": "Verify HTTP Status Verify 200 HTTP Status should fetch all the available users with auth login token",
+                  "timedOut": false,
+                  "duration": 798,
+                  "state": "passed",
+                  "speed": "slow",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "return __awaiter(void 0, void 0, void 0, function () {\n                var loginResponse, allUsersPageResponse;\n                return __generator(this, function (_a) {\n                    switch (_a.label) {\n                        case 0: return [4 /*yield*/, (0, apiUtil_1.loginUserApiRequest)({\n                                email: 'eve.holt@reqres.in',\n                                password: 'cityslicka'\n                            })];\n                        case 1:\n                            loginResponse = _a.sent();\n                            return [4 /*yield*/, (0, apiUtil_1.getAllUsersApiRequest)(loginResponse.data.token)];\n                        case 2:\n                            allUsersPageResponse = _a.sent();\n                            (0, chai_1.expect)(allUsersPageResponse.status).to.be.eq(200);\n                            return [2 /*return*/];\n                    }\n                });\n            });",
+                  "err": {},
+                  "uuid": "5cb79538-aa14-4b59-aee4-a2b8f3472dee",
+                  "parentUUID": "cb20804b-cd06-4f71-a382-0712222d0b63",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "5cb79538-aa14-4b59-aee4-a2b8f3472dee"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 798,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 5000
+            },
+            {
+              "uuid": "4fff1336-65f0-4249-a4a5-57f737b032ce",
+              "title": "Verify 201 HTTP Status",
+              "fullFile": "/tests/api/httpStatus/httpStatus.api.spec.ts",
+              "file": "/api/httpStatus/httpStatus.api.spec.ts",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "should create new user",
+                  "fullTitle": "Verify HTTP Status Verify 201 HTTP Status should create new user",
+                  "timedOut": false,
+                  "duration": 323,
+                  "state": "passed",
+                  "speed": "slow",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "return __awaiter(void 0, void 0, void 0, function () {\n                var authCreds, name, job, postData, createUserResponse;\n                return __generator(this, function (_a) {\n                    switch (_a.label) {\n                        case 0:\n                            authCreds = {\n                                username: 'eve.holt@reqres.in',\n                                password: 'cityslicka'\n                            };\n                            name = (0, core_1.newUserData)().name;\n                            job = 'leader';\n                            postData = {\n                                name: name,\n                                job: job\n                            };\n                            return [4 /*yield*/, (0, apiUtil_1.postApiRequest)(apiUtil_1.userEndpoint, postData, authCreds)];\n                        case 1:\n                            createUserResponse = _a.sent();\n                            (0, chai_1.expect)(createUserResponse.status).to.be.eql(201);\n                            return [2 /*return*/];\n                    }\n                });\n            });",
+                  "err": {},
+                  "uuid": "d596aa29-aa48-45f9-849c-cfcf6d1d3df8",
+                  "parentUUID": "4fff1336-65f0-4249-a4a5-57f737b032ce",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "d596aa29-aa48-45f9-849c-cfcf6d1d3df8"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 323,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 5000
+            },
+            {
+              "uuid": "990ca6ed-35e9-4046-93dd-1d5b98db7700",
+              "title": "Verify 204 HTTP Status",
+              "fullFile": "/tests/api/httpStatus/httpStatus.api.spec.ts",
+              "file": "/api/httpStatus/httpStatus.api.spec.ts",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "should delete an existing user using delete http method",
+                  "fullTitle": "Verify HTTP Status Verify 204 HTTP Status should delete an existing user using delete http method",
+                  "timedOut": false,
+                  "duration": 674,
+                  "state": "passed",
+                  "speed": "slow",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "return __awaiter(void 0, void 0, void 0, function () {\n                var authCreds, allUsersPageResponse, allUsersList, id, deleteUserResponse;\n                return __generator(this, function (_a) {\n                    switch (_a.label) {\n                        case 0:\n                            authCreds = {\n                                username: 'eve.holt@reqres.in',\n                                password: 'cityslicka'\n                            };\n                            return [4 /*yield*/, (0, apiUtil_1.getAllUsersApiRequest)(authCreds)];\n                        case 1:\n                            allUsersPageResponse = _a.sent();\n                            (0, chai_1.expect)(allUsersPageResponse.status).to.be.eql(200);\n                            allUsersList = allUsersPageResponse.data.data;\n                            id = allUsersList[0].id;\n                            return [4 /*yield*/, (0, apiUtil_1.deleteApiRequest)(\"\".concat(apiUtil_1.userEndpoint, \"/\").concat(id), authCreds)];\n                        case 2:\n                            deleteUserResponse = _a.sent();\n                            (0, chai_1.expect)(deleteUserResponse.status).to.be.eql(204);\n                            return [2 /*return*/];\n                    }\n                });\n            });",
+                  "err": {},
+                  "uuid": "506e45ec-1ec6-4008-bca6-6b9ec6d1f5e9",
+                  "parentUUID": "990ca6ed-35e9-4046-93dd-1d5b98db7700",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "506e45ec-1ec6-4008-bca6-6b9ec6d1f5e9"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 674,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 5000
+            },
+            {
+              "uuid": "05cb42b7-8de0-40fe-8ea4-9725b178f32f",
+              "title": "Verify 400 HTTP Status",
+              "fullFile": "/tests/api/httpStatus/httpStatus.api.spec.ts",
+              "file": "/api/httpStatus/httpStatus.api.spec.ts",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "should return 400 for an incomplete user json payload request",
+                  "fullTitle": "Verify HTTP Status Verify 400 HTTP Status should return 400 for an incomplete user json payload request",
+                  "timedOut": false,
+                  "duration": 511,
+                  "state": "passed",
+                  "speed": "slow",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "return __awaiter(void 0, void 0, void 0, function () {\n                var authCreds, email, postData, registerUserResponse;\n                return __generator(this, function (_a) {\n                    switch (_a.label) {\n                        case 0:\n                            authCreds = {\n                                username: 'eve.holt@reqres.in',\n                                password: 'cityslicka'\n                            };\n                            email = (0, core_1.newUserData)().email;\n                            postData = {\n                                email: email\n                            };\n                            return [4 /*yield*/, (0, apiUtil_1.postApiRequest)(apiUtil_1.registerEndpoint, postData, authCreds)];\n                        case 1:\n                            registerUserResponse = _a.sent();\n                            (0, chai_1.expect)(registerUserResponse.status).to.be.eql(400);\n                            return [2 /*return*/];\n                    }\n                });\n            });",
+                  "err": {},
+                  "uuid": "1349f9d6-818f-4043-a6ca-b60c39a161b7",
+                  "parentUUID": "05cb42b7-8de0-40fe-8ea4-9725b178f32f",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "1349f9d6-818f-4043-a6ca-b60c39a161b7"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 511,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 5000
+            },
+            {
+              "uuid": "fbd908a2-1992-4b73-83d2-42d512ef7967",
+              "title": "Verify 404 HTTP Status",
+              "fullFile": "/tests/api/httpStatus/httpStatus.api.spec.ts",
+              "file": "/api/httpStatus/httpStatus.api.spec.ts",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "should return 404 for an unknown user endpoint",
+                  "fullTitle": "Verify HTTP Status Verify 404 HTTP Status should return 404 for an unknown user endpoint",
+                  "timedOut": false,
+                  "duration": 469,
+                  "state": "passed",
+                  "speed": "slow",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "return __awaiter(void 0, void 0, void 0, function () {\n                var authCreds, id, deleteUserResponse;\n                return __generator(this, function (_a) {\n                    switch (_a.label) {\n                        case 0:\n                            authCreds = {\n                                username: 'eve.holt@reqres.in',\n                                password: 'cityslicka'\n                            };\n                            id = 100;\n                            return [4 /*yield*/, (0, apiUtil_1.getApiRequest)(\"\".concat(apiUtil_1.userEndpoint, \"/\").concat(id), authCreds)];\n                        case 1:\n                            deleteUserResponse = _a.sent();\n                            (0, chai_1.expect)(deleteUserResponse.status).to.be.eql(404);\n                            return [2 /*return*/];\n                    }\n                });\n            });",
+                  "err": {},
+                  "uuid": "44a94549-e316-4a56-bb01-b658b5e258f4",
+                  "parentUUID": "fbd908a2-1992-4b73-83d2-42d512ef7967",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "44a94549-e316-4a56-bb01-b658b5e258f4"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 469,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 5000
+            }
+          ],
+          "passes": [],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 5000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 5000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "9.2.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "./reports/mocha/api",
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "timestamp": "mmddyyyy_HHMMss"
+      },
+      "version": "5.2.0"
+    }
+  }
+}

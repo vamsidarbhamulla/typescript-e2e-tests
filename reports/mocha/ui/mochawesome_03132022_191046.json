@@ -1,0 +1,183 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 5,
+    "passes": 5,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-03-13T19:09:53.938Z",
+    "end": "2022-03-13T19:10:46.693Z",
+    "duration": 52755,
+    "testsRegistered": 5,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "6f91f94b-3f8c-4895-9c7f-f9994392820b",
+      "title": "",
+      "fullFile": "cypress/integration/searchForAnItem.feature",
+      "file": "cypress/integration/searchForAnItem.feature",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "43f21d4b-bac6-43d7-af4b-56da248fd885",
+          "title": "Search for an item",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Search available product from navigation-menu",
+              "fullTitle": "Search for an item Search available product from navigation-menu",
+              "timedOut": null,
+              "duration": 12669,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach((step) =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() => state.onFinishScenario(scenario));",
+              "err": {},
+              "uuid": "512a8dbe-ef9f-47d3-b8f9-606c02ba7393",
+              "parentUUID": "43f21d4b-bac6-43d7-af4b-56da248fd885",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Search unavailable product from navigation-menu",
+              "fullTitle": "Search for an item Search unavailable product from navigation-menu",
+              "timedOut": null,
+              "duration": 8704,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach((step) =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() => state.onFinishScenario(scenario));",
+              "err": {},
+              "uuid": "71fbd531-43a3-45c0-99f7-5db8865189bf",
+              "parentUUID": "43f21d4b-bac6-43d7-af4b-56da248fd885",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Search available camera with a keyword (example #1)",
+              "fullTitle": "Search for an item Search available camera with a keyword (example #1)",
+              "timedOut": null,
+              "duration": 10695,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach((step) =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() => state.onFinishScenario(scenario));",
+              "err": {},
+              "uuid": "91cc47a6-79c2-4828-8aef-26dfad9a44d4",
+              "parentUUID": "43f21d4b-bac6-43d7-af4b-56da248fd885",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Search available speaker with a keyword (example #2)",
+              "fullTitle": "Search for an item Search available speaker with a keyword (example #2)",
+              "timedOut": null,
+              "duration": 11780,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach((step) =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() => state.onFinishScenario(scenario));",
+              "err": {},
+              "uuid": "e3d18f78-1803-4b6e-a111-01217b8f4810",
+              "parentUUID": "43f21d4b-bac6-43d7-af4b-56da248fd885",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Search available watch with a keyword (example #3)",
+              "fullTitle": "Search for an item Search available watch with a keyword (example #3)",
+              "timedOut": null,
+              "duration": 8561,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach((step) =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() => state.onFinishScenario(scenario));",
+              "err": {},
+              "uuid": "27b115af-3cdd-4b8c-baba-701167463344",
+              "parentUUID": "43f21d4b-bac6-43d7-af4b-56da248fd885",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "512a8dbe-ef9f-47d3-b8f9-606c02ba7393",
+            "71fbd531-43a3-45c0-99f7-5db8865189bf",
+            "91cc47a6-79c2-4828-8aef-26dfad9a44d4",
+            "e3d18f78-1803-4b6e-a111-01217b8f4810",
+            "27b115af-3cdd-4b8c-baba-701167463344"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 52409,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "./reports/mocha/ui",
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "timestamp": "mmddyyyy_HHMMss"
+      },
+      "version": "5.2.0"
+    }
+  }
+}

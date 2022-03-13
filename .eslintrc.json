@@ -72,7 +72,17 @@
     "node": true,
     "mocha": true
   },
-  "ignorePatterns": ["**/*.json"],
+  "ignorePatterns": [
+    "**/*.json",
+    "**/*.sh",
+    "**/load/**/*.js",
+    "**/*.md",
+    "**/*.txt",
+    "**/*.Dockerfile",
+    "**/*.json",
+    "**/*.log",
+    "**/*.yml"
+  ],
   "settings": {
     "import/parsers": {
       "@typescript-eslint/parser": [".ts", ".js"]

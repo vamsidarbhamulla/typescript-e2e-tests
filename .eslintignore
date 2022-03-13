@@ -2,3 +2,9 @@
 **/load/**/*.js
 **/node_modules
 ./reporterConfig.js
+**/*.md
+**/*.sh
+**/*.txt
+**/*.Dockerfile
+**/*.json
+**/*.log

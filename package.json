@@ -12,8 +12,8 @@
         "prettier-check": "prettier --config ./.prettierrc './**/*.ts' --check",
         "prettier-format": "prettier --config ./.prettierrc './**/*.ts' --write",
         "api-build": "tsc -b --verbose",
-        "api-itest": "ts-mocha --paths --timeout 5000 --recursive \"./api/**/*.api.spec.ts\"\n",
-        "api-scripts": "npm install && export TEST_TYPE=api && ts-mocha --paths --timeout 5000 \"./api/**/*.api.spec.ts\" --reporter mocha-multi-reporters --reporter-options configFile=reporterconfig.js",
+        "api-itest": "ts-mocha --paths --timeout 25000 --recursive \"./api/**/*.api.spec.ts\"\n",
+        "api-scripts": "export TEST_TYPE=api && ts-mocha --paths --timeout 5000 \"./api/**/*.api.spec.ts\" --reporter mocha-multi-reporters --reporter-options configFile=reporterconfig.js",
         "cy:run": "cypress run",
         "cy:open": "cypress open",
         "clean:reports": "rm -R -f ./reports && mkdir -p ./reports/mocha",
@@ -49,7 +49,7 @@
         "chai": "4.3.4",
         "cypress": "9.5.1",
         "cypress-cucumber-preprocessor": "4.3.1",
-        "cypress-file-upload": "^5.0.8",
+        "cypress-file-upload": "5.0.8",
         "cypress-multi-reporters": "1.5.0",
         "cypress-terminal-report": "3.4.1",
         "eslint": "7.31.0",
@@ -88,10 +88,6 @@
     },
     "cypress-cucumber-preprocessor": {
         "nonGlobalStepDefinitions": true
-    },
-    "engines": {
-        "node": "10.16.3",
-        "npm": "6.9.0"
     },
     "husky": {
         "hooks": {

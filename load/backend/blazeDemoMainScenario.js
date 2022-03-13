@@ -1,12 +1,5 @@
-// Creator: WebInspector 537.36
-
 import { sleep, group } from 'k6';
 import http from 'k6/http';
-
-export const options = {
-  vus: 1,
-  duration: '10s'
-};
 
 export function selectDestinationAndFlight() {
   // eslint-disable-next-line @typescript-eslint/ban-ts-comment

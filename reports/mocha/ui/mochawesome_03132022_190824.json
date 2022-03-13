@@ -1,0 +1,126 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-03-13T19:07:53.476Z",
+    "end": "2022-03-13T19:08:24.675Z",
+    "duration": 31199,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "8f8df37a-c1d2-4c99-87c7-0eedefd47da0",
+      "title": "",
+      "fullFile": "cypress/integration/contact.feature",
+      "file": "cypress/integration/contact.feature",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "19d958cc-47b5-48d2-8874-78ced3caab1a",
+          "title": "Contact",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "User should see contact information",
+              "fullTitle": "Contact User should see contact information",
+              "timedOut": null,
+              "duration": 14660,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach((step) =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() => state.onFinishScenario(scenario));",
+              "err": {},
+              "uuid": "a2f24e26-9f49-4b3e-a46f-4eb33ba792a5",
+              "parentUUID": "19d958cc-47b5-48d2-8874-78ced3caab1a",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "User should send send a message to contact team",
+              "fullTitle": "Contact User should send send a message to contact team",
+              "timedOut": null,
+              "duration": 16225,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach((step) =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() => state.onFinishScenario(scenario));",
+              "err": {},
+              "uuid": "a5288135-3bdd-4cf3-a40d-1caf64d2d55f",
+              "parentUUID": "19d958cc-47b5-48d2-8874-78ced3caab1a",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "a2f24e26-9f49-4b3e-a46f-4eb33ba792a5",
+            "a5288135-3bdd-4cf3-a40d-1caf64d2d55f"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 30885,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "./reports/mocha/ui",
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "timestamp": "mmddyyyy_HHMMss"
+      },
+      "version": "5.2.0"
+    }
+  }
+}

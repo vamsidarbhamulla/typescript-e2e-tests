@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="25.1170" tests="2" failures="0">
+  <testsuite name="Root Suite" timestamp="2022-03-13T19:35:50" tests="0" file="cypress/integration/contact.feature" time="0.0000" failures="0">
+    <properties>
+      <property name="TEST_TYPE" value="ui"/>
+    </properties>
+  </testsuite>
+  <testsuite name="Contact" timestamp="2022-03-13T19:35:50" tests="2" time="25.0790" failures="0">
+    <properties>
+      <property name="TEST_TYPE" value="ui"/>
+    </properties>
+    <testcase name="Contact User should see contact information" time="11.8350" classname="User should see contact information">
+    </testcase>
+    <testcase name="Contact User should send send a message to contact team" time="12.9040" classname="User should send send a message to contact team">
+    </testcase>
+  </testsuite>
+</testsuites>

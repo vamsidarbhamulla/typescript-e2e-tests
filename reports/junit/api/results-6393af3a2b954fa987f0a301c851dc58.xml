@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="7.2880" tests="13" failures="0">
+  <testsuite name="Root Suite" timestamp="2022-03-13T17:46:58" tests="0" time="0.0000" failures="0">
+    <properties>
+      <property name="TEST_TYPE" value="api"/>
+    </properties>
+  </testsuite>
+  <testsuite name="Verify POST Login api endpoint" timestamp="2022-03-13T17:46:58" tests="1" file="/tests/api/auth/post.loginUser.api.spec.ts" time="0.5270" failures="0">
+    <properties>
+      <property name="TEST_TYPE" value="api"/>
+    </properties>
+    <testcase name="Verify POST Login api endpoint should fetch login token" time="0.5190" classname="should fetch login token">
+    </testcase>
+  </testsuite>
+  <testsuite name="Verify HTTP DELETE method by using delete user api endpoint" timestamp="2022-03-13T17:46:59" tests="1" file="/tests/api/httpMethods/delete.deleteUser.api.spec.ts" time="0.7620" failures="0">
+    <properties>
+      <property name="TEST_TYPE" value="api"/>
+    </properties>
+    <testcase name="Verify HTTP DELETE method by using delete user api endpoint should delete an existing user using delete http method" time="0.7590" classname="should delete an existing user using delete http method">
+    </testcase>
+  </testsuite>
+  <testsuite name="Verify HTTP GET using get all users api endpoint" timestamp="2022-03-13T17:46:59" tests="2" file="/tests/api/httpMethods/get.getUsers.api.spec.ts" time="1.0950" failures="0">
+    <properties>
+      <property name="TEST_TYPE" value="api"/>
+    </properties>
+    <testcase name="Verify HTTP GET using get all users api endpoint should fetch all the available users with auth login token" time="0.8620" classname="should fetch all the available users with auth login token">
+    </testcase>
+    <testcase name="Verify HTTP GET using get all users api endpoint should fetch all the available users with basic auth" time="0.2270" classname="should fetch all the available users with basic auth">
+    </testcase>
+  </testsuite>
+  <testsuite name="Verify HTTP PATCH by updating user api endpoint" timestamp="2022-03-13T17:47:01" tests="1" file="/tests/api/httpMethods/patch.updateUser.api.spec.ts" time="0.7770" failures="0">
+    <properties>
+      <property name="TEST_TYPE" value="api"/>
+    </properties>
+    <testcase name="Verify HTTP PATCH by updating user api endpoint should update an existing user using patch http method" time="0.7740" classname="should update an existing user using patch http method">
+    </testcase>
+  </testsuite>
+  <testsuite name="Verify HTTP POST create user api endpoint" timestamp="2022-03-13T17:47:01" tests="1" file="/tests/api/httpMethods/post.createUser.api.spec.ts" time="0.3510" failures="0">
+    <properties>
+      <property name="TEST_TYPE" value="api"/>
+    </properties>
+    <testcase name="Verify HTTP POST create user api endpoint should fetch token for successful login" time="0.3490" classname="should fetch token for successful login">
+    </testcase>
+  </testsuite>
+  <testsuite name="Verify HTTP POST register user api endpoint" timestamp="2022-03-13T17:47:02" tests="1" file="/tests/api/httpMethods/post.registerUser.api.spec.ts" time="0.4200" failures="0">
+    <properties>
+      <property name="TEST_TYPE" value="api"/>
+    </properties>
+    <testcase name="Verify HTTP POST register user api endpoint should receive error message for unsuccessful registration" time="0.4180" classname="should receive error message for unsuccessful registration">
+    </testcase>
+  </testsuite>
+  <testsuite name="Verify HTTP PUT method by updating update user api endpoint" timestamp="2022-03-13T17:47:02" tests="1" file="/tests/api/httpMethods/put.updateUser.api.spec.ts" time="0.6380" failures="0">
+    <properties>
+      <property name="TEST_TYPE" value="api"/>
+    </properties>
+    <testcase name="Verify HTTP PUT method by updating update user api endpoint should update an existing user using put http method" time="0.6360" classname="should update an existing user using put http method">
+    </testcase>
+  </testsuite>
+  <testsuite name="Verify HTTP Status" timestamp="2022-03-13T17:47:03" tests="0" file="/tests/api/httpStatus/httpStatus.api.spec.ts" time="0.0000" failures="0">
+    <properties>
+      <property name="TEST_TYPE" value="api"/>
+    </properties>
+  </testsuite>
+  <testsuite name="Verify 200 HTTP Status" timestamp="2022-03-13T17:47:03" tests="1" file="/tests/api/httpStatus/httpStatus.api.spec.ts" time="0.6450" failures="0">
+    <properties>
+      <property name="TEST_TYPE" value="api"/>
+    </properties>
+    <testcase name="Verify HTTP Status Verify 200 HTTP Status should fetch all the available users with auth login token" time="0.6420" classname="should fetch all the available users with auth login token">
+    </testcase>
+  </testsuite>
+  <testsuite name="Verify 201 HTTP Status" timestamp="2022-03-13T17:47:03" tests="1" file="/tests/api/httpStatus/httpStatus.api.spec.ts" time="0.4400" failures="0">
+    <properties>
+      <property name="TEST_TYPE" value="api"/>
+    </properties>
+    <testcase name="Verify HTTP Status Verify 201 HTTP Status should create new user" time="0.4380" classname="should create new user">
+    </testcase>
+  </testsuite>
+  <testsuite name="Verify 204 HTTP Status" timestamp="2022-03-13T17:47:04" tests="1" file="/tests/api/httpStatus/httpStatus.api.spec.ts" time="0.7870" failures="0">
+    <properties>
+      <property name="TEST_TYPE" value="api"/>
+    </properties>
+    <testcase name="Verify HTTP Status Verify 204 HTTP Status should delete an existing user using delete http method" time="0.7860" classname="should delete an existing user using delete http method">
+    </testcase>
+  </testsuite>
+  <testsuite name="Verify 400 HTTP Status" timestamp="2022-03-13T17:47:05" tests="1" file="/tests/api/httpStatus/httpStatus.api.spec.ts" time="0.4140" failures="0">
+    <properties>
+      <property name="TEST_TYPE" value="api"/>
+    </properties>
+    <testcase name="Verify HTTP Status Verify 400 HTTP Status should return 400 for an incomplete user json payload request" time="0.4130" classname="should return 400 for an incomplete user json payload request">
+    </testcase>
+  </testsuite>
+  <testsuite name="Verify 404 HTTP Status" timestamp="2022-03-13T17:47:05" tests="1" file="/tests/api/httpStatus/httpStatus.api.spec.ts" time="0.4220" failures="0">
+    <properties>
+      <property name="TEST_TYPE" value="api"/>
+    </properties>
+    <testcase name="Verify HTTP Status Verify 404 HTTP Status should return 404 for an unknown user endpoint" time="0.4200" classname="should return 404 for an unknown user endpoint">
+    </testcase>
+  </testsuite>
+</testsuites>

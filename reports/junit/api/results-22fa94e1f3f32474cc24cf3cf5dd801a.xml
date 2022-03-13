@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="33.2850" tests="13" failures="3">
+  <testsuite name="Root Suite" timestamp="2022-03-13T19:17:47" tests="0" time="0.0000" failures="0">
+    <properties>
+      <property name="TEST_TYPE" value="api"/>
+    </properties>
+  </testsuite>
+  <testsuite name="Verify POST Login api endpoint" timestamp="2022-03-13T19:17:47" tests="1" file="/tests/api/auth/post.loginUser.api.spec.ts" time="5.1540" failures="1">
+    <properties>
+      <property name="TEST_TYPE" value="api"/>
+    </properties>
+    <testcase name="Verify POST Login api endpoint should fetch login token" time="5.1370" classname="should fetch login token">
+      <failure message="Timeout of 5000ms exceeded. For async tests and hooks, ensure &quot;done()&quot; is called; if returning a Promise, ensure it resolves. (/tests/api/auth/post.loginUser.api.spec.ts)" type="Error"><![CDATA[Error: Timeout of 5000ms exceeded. For async tests and hooks, ensure "done()" is called; if returning a Promise, ensure it resolves. (/tests/api/auth/post.loginUser.api.spec.ts)
+    at listOnTimeout (node:internal/timers:557:17)
+    at processTimers (node:internal/timers:500:7)]]></failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="Verify HTTP DELETE method by using delete user api endpoint" timestamp="2022-03-13T19:17:52" tests="1" file="/tests/api/httpMethods/delete.deleteUser.api.spec.ts" time="3.9260" failures="0">
+    <properties>
+      <property name="TEST_TYPE" value="api"/>
+    </properties>
+    <testcase name="Verify HTTP DELETE method by using delete user api endpoint should delete an existing user using delete http method" time="3.9240" classname="should delete an existing user using delete http method">
+    </testcase>
+  </testsuite>
+  <testsuite name="Verify HTTP GET using get all users api endpoint" timestamp="2022-03-13T19:17:56" tests="2" file="/tests/api/httpMethods/get.getUsers.api.spec.ts" time="3.8990" failures="0">
+    <properties>
+      <property name="TEST_TYPE" value="api"/>
+    </properties>
+    <testcase name="Verify HTTP GET using get all users api endpoint should fetch all the available users with auth login token" time="2.8430" classname="should fetch all the available users with auth login token">
+    </testcase>
+    <testcase name="Verify HTTP GET using get all users api endpoint should fetch all the available users with basic auth" time="1.0520" classname="should fetch all the available users with basic auth">
+    </testcase>
+  </testsuite>
+  <testsuite name="Verify HTTP PATCH by updating user api endpoint" timestamp="2022-03-13T19:18:00" tests="1" file="/tests/api/httpMethods/patch.updateUser.api.spec.ts" time="4.9720" failures="1">
+    <properties>
+      <property name="TEST_TYPE" value="api"/>
+    </properties>
+    <testcase name="Verify HTTP PATCH by updating user api endpoint should update an existing user using patch http method" time="4.9690" classname="should update an existing user using patch http method">
+      <failure message="Timeout of 5000ms exceeded. For async tests and hooks, ensure &quot;done()&quot; is called; if returning a Promise, ensure it resolves. (/tests/api/httpMethods/patch.updateUser.api.spec.ts)" type="Error"><![CDATA[Error: Timeout of 5000ms exceeded. For async tests and hooks, ensure "done()" is called; if returning a Promise, ensure it resolves. (/tests/api/httpMethods/patch.updateUser.api.spec.ts)
+    at listOnTimeout (node:internal/timers:557:17)
+    at processTimers (node:internal/timers:500:7)]]></failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="Verify HTTP POST create user api endpoint" timestamp="2022-03-13T19:18:05" tests="1" file="/tests/api/httpMethods/post.createUser.api.spec.ts" time="4.6130" failures="0">
+    <properties>
+      <property name="TEST_TYPE" value="api"/>
+    </properties>
+    <testcase name="Verify HTTP POST create user api endpoint should fetch token for successful login" time="4.6100" classname="should fetch token for successful login">
+    </testcase>
+  </testsuite>
+  <testsuite name="Verify HTTP POST register user api endpoint" timestamp="2022-03-13T19:18:10" tests="1" file="/tests/api/httpMethods/post.registerUser.api.spec.ts" time="1.5030" failures="0">
+    <properties>
+      <property name="TEST_TYPE" value="api"/>
+    </properties>
+    <testcase name="Verify HTTP POST register user api endpoint should receive error message for unsuccessful registration" time="1.5010" classname="should receive error message for unsuccessful registration">
+    </testcase>
+  </testsuite>
+  <testsuite name="Verify HTTP PUT method by updating update user api endpoint" timestamp="2022-03-13T19:18:11" tests="1" file="/tests/api/httpMethods/put.updateUser.api.spec.ts" time="5.0050" failures="1">
+    <properties>
+      <property name="TEST_TYPE" value="api"/>
+    </properties>
+    <testcase name="Verify HTTP PUT method by updating update user api endpoint should update an existing user using put http method" time="5.0040" classname="should update an existing user using put http method">
+      <failure message="Timeout of 5000ms exceeded. For async tests and hooks, ensure &quot;done()&quot; is called; if returning a Promise, ensure it resolves. (/tests/api/httpMethods/put.updateUser.api.spec.ts)" type="Error"><![CDATA[Error: Timeout of 5000ms exceeded. For async tests and hooks, ensure "done()" is called; if returning a Promise, ensure it resolves. (/tests/api/httpMethods/put.updateUser.api.spec.ts)
+    at listOnTimeout (node:internal/timers:557:17)
+    at processTimers (node:internal/timers:500:7)]]></failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="Verify HTTP Status" timestamp="2022-03-13T19:18:16" tests="0" file="/tests/api/httpStatus/httpStatus.api.spec.ts" time="0.0000" failures="0">
+    <properties>
+      <property name="TEST_TYPE" value="api"/>
+    </properties>
+  </testsuite>
+  <testsuite name="Verify 200 HTTP Status" timestamp="2022-03-13T19:18:16" tests="1" file="/tests/api/httpStatus/httpStatus.api.spec.ts" time="2.2710" failures="0">
+    <properties>
+      <property name="TEST_TYPE" value="api"/>
+    </properties>
+    <testcase name="Verify HTTP Status Verify 200 HTTP Status should fetch all the available users with auth login token" time="2.2700" classname="should fetch all the available users with auth login token">
+    </testcase>
+  </testsuite>
+  <testsuite name="Verify 201 HTTP Status" timestamp="2022-03-13T19:18:19" tests="1" file="/tests/api/httpStatus/httpStatus.api.spec.ts" time="0.4400" failures="0">
+    <properties>
+      <property name="TEST_TYPE" value="api"/>
+    </properties>
+    <testcase name="Verify HTTP Status Verify 201 HTTP Status should create new user" time="0.4390" classname="should create new user">
+    </testcase>
+  </testsuite>
+  <testsuite name="Verify 204 HTTP Status" timestamp="2022-03-13T19:18:19" tests="1" file="/tests/api/httpStatus/httpStatus.api.spec.ts" time="0.6460" failures="0">
+    <properties>
+      <property name="TEST_TYPE" value="api"/>
+    </properties>
+    <testcase name="Verify HTTP Status Verify 204 HTTP Status should delete an existing user using delete http method" time="0.6440" classname="should delete an existing user using delete http method">
+    </testcase>
+  </testsuite>
+  <testsuite name="Verify 400 HTTP Status" timestamp="2022-03-13T19:18:20" tests="1" file="/tests/api/httpStatus/httpStatus.api.spec.ts" time="0.4180" failures="0">
+    <properties>
+      <property name="TEST_TYPE" value="api"/>
+    </properties>
+    <testcase name="Verify HTTP Status Verify 400 HTTP Status should return 400 for an incomplete user json payload request" time="0.4170" classname="should return 400 for an incomplete user json payload request">
+    </testcase>
+  </testsuite>
+  <testsuite name="Verify 404 HTTP Status" timestamp="2022-03-13T19:18:20" tests="1" file="/tests/api/httpStatus/httpStatus.api.spec.ts" time="0.4190" failures="0">
+    <properties>
+      <property name="TEST_TYPE" value="api"/>
+    </properties>
+    <testcase name="Verify HTTP Status Verify 404 HTTP Status should return 404 for an unknown user endpoint" time="0.4170" classname="should return 404 for an unknown user endpoint">
+    </testcase>
+  </testsuite>
+</testsuites>

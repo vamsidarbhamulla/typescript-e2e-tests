@@ -1,0 +1,55 @@
+version: "3.9"
+services:
+  ui-tests:
+    image: e2e-tests:v1
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: ui-tests
+    volumes:
+      - ./:/tests
+      - ./temp/node_modules:/tests/temp/node_modules
+      - ./temp/.cache/Cypress:/root/.cache/Cypress
+    environment:
+      - TEST_TYPE=ui
+    networks:
+      - e2e-tests
+
+  api-tests:
+    image: e2e-tests:v1
+    container_name: api-tests
+    environment:
+      - TEST_TYPE=api
+    volumes:
+      - ./:/tests
+      - ./temp/node_modules:/tests/temp/node_modules
+    networks:
+      - e2e-tests
+
+  load-tests-be:
+    image: load-tests:v1
+    build:
+      context: .
+      dockerfile: k6.Dockerfile
+    container_name: load-tests-be
+    volumes:
+      - ./:/home/k6/tests
+      - ./temp/node_modules:/tests/temp/node_modules
+    ports:
+      - "6565:6565"
+    environment:
+      - TEST_TYPE=be
+      - K6_OUT=influxdb=http://influxdb:8086/k6
+    networks:
+      - e2e-tests
+      - metrics
+
+networks:
+  e2e-tests:
+    name: e2e-tests
+  grafana:
+    name: grafana
+  metrics:
+    external:
+      name: metrics
+

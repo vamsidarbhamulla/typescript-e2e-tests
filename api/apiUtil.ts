@@ -6,8 +6,7 @@ export const loginEndpoint = '/api/login';
 export const registerEndpoint = '/api/register';
 
 /* eslint-disable */
-export async function getAllUsersApiRequest<T = any, R = AxiosResponse<any> | AxiosError<any> | Error | unknown>
-(auth?: AxiosBasicCredentials | string) {
+export async function getAllUsersApiRequest<T = any, R = AxiosResponse<any> | AxiosError<any> | Error | unknown>(auth?: AxiosBasicCredentials | string) {
   const envConfig = getEnvironmentConfig();
   const axiosRequestConfig: AxiosRequestConfig = {
     method: 'GET',
@@ -18,15 +17,13 @@ export async function getAllUsersApiRequest<T = any, R = AxiosResponse<any> | Ax
 }
 
 /* eslint-disable */
-export async function loginUserApiRequest<T = any, R = AxiosResponse<any> | AxiosError<any> | Error | unknown>
-(data: T): Promise<R> {
+export async function loginUserApiRequest<T = any, R = AxiosResponse<any> | AxiosError<any> | Error | unknown>(data: T): Promise<R> {
   /* eslint-enable */
   return postApiRequest('/api/login', data);
 }
 
 /* eslint-disable */
-export async function getApiRequest<R = AxiosResponse<any> | AxiosError<any> | Error | unknown>
-(endpoint: string, auth?: AxiosBasicCredentials | string): Promise<R> {
+export async function getApiRequest<R = AxiosResponse<any> | AxiosError<any> | Error | unknown>(endpoint: string, auth?: AxiosBasicCredentials | string): Promise<R> {
   /* eslint-enable */
   const envConfig = getEnvironmentConfig();
   const url = endpoint.startsWith('/') ? `${envConfig.baseUrl}${endpoint}` : `${envConfig.baseUrl}/${endpoint}`;
@@ -39,8 +36,7 @@ export async function getApiRequest<R = AxiosResponse<any> | AxiosError<any> | E
 }
 
 /* eslint-disable */
-export async function postApiRequest<T = any, R = AxiosResponse<any> | AxiosError<any> | Error | unknown>
-(endpoint: string, data: T, auth?: AxiosBasicCredentials | string): Promise<R> {
+export async function postApiRequest<T = any, R = AxiosResponse<any> | AxiosError<any> | Error | unknown>(endpoint: string, data: T, auth?: AxiosBasicCredentials | string): Promise<R> {
   /* eslint-enable */
   const envConfig = getEnvironmentConfig();
   if (envConfig.env.isDebug) {
@@ -58,8 +54,7 @@ export async function postApiRequest<T = any, R = AxiosResponse<any> | AxiosErro
 }
 
 /* eslint-disable */
-export async function putApiRequest<T = any, R = AxiosResponse<any> | AxiosError<any> | Error | unknown>
-(endpoint: string, data: T, auth?: AxiosBasicCredentials | string): Promise<R> {
+export async function putApiRequest<T = any, R = AxiosResponse<any> | AxiosError<any> | Error | unknown>(endpoint: string, data: T, auth?: AxiosBasicCredentials | string): Promise<R> {
   /* eslint-enable */
   const envConfig = getEnvironmentConfig();
   if (envConfig.env.isDebug) {
@@ -77,8 +72,7 @@ export async function putApiRequest<T = any, R = AxiosResponse<any> | AxiosError
 }
 
 /* eslint-disable */
-export async function patchApiRequest<T = any, R = AxiosResponse<any> | AxiosError<any> | Error | unknown>
-(endpoint: string, data: T, auth?: AxiosBasicCredentials | string): Promise<R> {
+export async function patchApiRequest<T = any, R = AxiosResponse<any> | AxiosError<any> | Error | unknown>(endpoint: string, data: T, auth?: AxiosBasicCredentials | string): Promise<R> {
   /* eslint-enable */
   const envConfig = getEnvironmentConfig();
   if (envConfig.env.isDebug) {
@@ -96,8 +90,7 @@ export async function patchApiRequest<T = any, R = AxiosResponse<any> | AxiosErr
 }
 
 /* eslint-disable */
-export async function deleteApiRequest<R = AxiosResponse<any> | AxiosError<any> | Error | unknown>
-(endpoint: string, auth?: AxiosBasicCredentials | string): Promise<R> {
+export async function deleteApiRequest<R = AxiosResponse<any> | AxiosError<any> | Error | unknown>(endpoint: string, auth?: AxiosBasicCredentials | string): Promise<R> {
   /* eslint-enable */
   const envConfig = getEnvironmentConfig();
   const axiosRequestConfig: AxiosRequestConfig = {
@@ -110,8 +103,7 @@ export async function deleteApiRequest<R = AxiosResponse<any> | AxiosError<any> 
 }
 
 /* eslint-disable */
-export async function executeAxios<T = any, R = AxiosResponse<any> | AxiosError<any> | Error | unknown>
-(axiosRequestConfig: AxiosRequestConfig<T>): Promise<R> {
+export async function executeAxios<T = any, R = AxiosResponse<any> | AxiosError<any> | Error | unknown>(axiosRequestConfig: AxiosRequestConfig<T>): Promise<R> {
   /* eslint-enable */
   try {
     const envConfig = getEnvironmentConfig();
@@ -133,7 +125,7 @@ export async function executeAxios<T = any, R = AxiosResponse<any> | AxiosError<
   }
 }
 
-export function getEnvironmentConfig() {
+export function getEnvironmentConfig(): any {
   const testEnv = process.env.TEST_ENV || 'dev';
   // eslint-disable-next-line @typescript-eslint/no-var-requires,global-require,import/no-dynamic-require
   const { environmentConfig } = require(`../config/${testEnv}`);

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="63.5760" tests="5" failures="0">
+  <testsuite name="Root Suite" timestamp="2022-03-13T06:19:09" tests="0" file="cypress/integration/fileUpload.feature" time="0.0000" failures="0">
+    <properties>
+      <property name="TEST_TYPE" value="ui"/>
+    </properties>
+  </testsuite>
+  <testsuite name="Upload a File" timestamp="2022-03-13T06:19:09" tests="5" time="63.5240" failures="0">
+    <properties>
+      <property name="TEST_TYPE" value="ui"/>
+    </properties>
+    <testcase name="Upload a File User uploads an image file successfully" time="13.6600" classname="User uploads an image file successfully">
+    </testcase>
+    <testcase name="Upload a File User uploads binary file to see the upload failed" time="11.8030" classname="User uploads binary file to see the upload failed">
+    </testcase>
+    <testcase name="Upload a File User uploads file2.jpeg successfully (example #1)" time="11.4690" classname="User uploads file2.jpeg successfully (example #1)">
+    </testcase>
+    <testcase name="Upload a File User uploads file3.pdf successfully (example #2)" time="10.6480" classname="User uploads file3.pdf successfully (example #2)">
+    </testcase>
+    <testcase name="Upload a File User uploads file4.txt successfully (example #3)" time="15.5820" classname="User uploads file4.txt successfully (example #3)">
+    </testcase>
+  </testsuite>
+</testsuites>

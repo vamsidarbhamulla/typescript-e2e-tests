@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="110.8370" tests="5" failures="3">
+  <testsuite name="Root Suite" timestamp="2022-03-13T21:50:35" tests="0" file="cypress/integration/searchForAnItem.feature" time="0.0000" failures="0">
+    <properties>
+      <property name="TEST_TYPE" value="ui"/>
+    </properties>
+  </testsuite>
+  <testsuite name="Search for an item" timestamp="2022-03-13T21:50:35" tests="5" time="110.8060" failures="3">
+    <properties>
+      <property name="TEST_TYPE" value="ui"/>
+    </properties>
+    <testcase name="Search for an item Search available product from navigation-menu" time="10.9380" classname="Search available product from navigation-menu">
+    </testcase>
+    <testcase name="Search for an item Search unavailable product from navigation-menu" time="9.1450" classname="Search unavailable product from navigation-menu">
+    </testcase>
+    <testcase name="Search for an item Search available camera with a keyword (example #1)" time="9.7500" classname="Search available camera with a keyword (example #1)">
+    </testcase>
+    <testcase name="Search for an item Search available speaker with a keyword (example #2)" time="9.1680" classname="Search available speaker with a keyword (example #2)">
+    </testcase>
+    <testcase name="Search for an item Search available watch with a keyword (example #3)" time="0.0000" classname="Search available watch with a keyword (example #3)">
+      <failure message="Timed out after waiting `60000ms` for your remote page to load.
+
+Your page did not fire its `load` event within `60000ms`.
+
+You can try increasing the `pageLoadTimeout` value in `/tests/cypress.json` to wait longer.
+
+Browsers will not fire the `load` event until all stylesheets and scripts are done downloading.
+
+When this `load` event occurs, Cypress will continue running commands." type="CypressError"><![CDATA[CypressError: Timed out after waiting `60000ms` for your remote page to load.
+
+Your page did not fire its `load` event within `60000ms`.
+
+You can try increasing the `pageLoadTimeout` value in `/tests/cypress.json` to wait longer.
+
+Browsers will not fire the `load` event until all stylesheets and scripts are done downloading.
+
+When this `load` event occurs, Cypress will continue running commands.
+    at timedOutWaitingForPageLoad (https://practice.automationbro.com/__cypress/runner/cypress_runner.js:158276:72)
+    at https://practice.automationbro.com/__cypress/runner/cypress_runner.js:158596:16
+    at tryCatcher (https://practice.automationbro.com/__cypress/runner/cypress_runner.js:13022:23)
+    at https://practice.automationbro.com/__cypress/runner/cypress_runner.js:8144:41
+    at tryCatcher (https://practice.automationbro.com/__cypress/runner/cypress_runner.js:13022:23)
+    at Promise._settlePromiseFromHandler (https://practice.automationbro.com/__cypress/runner/cypress_runner.js:10957:31)
+    at Promise._settlePromise (https://practice.automationbro.com/__cypress/runner/cypress_runner.js:11014:18)
+    at Promise._settlePromise0 (https://practice.automationbro.com/__cypress/runner/cypress_runner.js:11059:10)
+    at Promise._settlePromises (https://practice.automationbro.com/__cypress/runner/cypress_runner.js:11135:18)
+    at _drainQueueStep (https://practice.automationbro.com/__cypress/runner/cypress_runner.js:7729:12)
+    at _drainQueue (https://practice.automationbro.com/__cypress/runner/cypress_runner.js:7722:9)
+    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (https://practice.automationbro.com/__cypress/runner/cypress_runner.js:7738:5)
+    at Async.drainQueues (https://practice.automationbro.com/__cypress/runner/cypress_runner.js:7608:14)
+From Your Spec Code:
+    at Context.eval (https://practice.automationbro.com/__cypress/tests?p=cypress/integration/searchForAnItem.feature:27:8)
+    at Context.resolveAndRunStepDefinition (https://practice.automationbro.com/__cypress/tests?p=cypress/integration/searchForAnItem.feature:10408:29)
+    at Context.eval (https://practice.automationbro.com/__cypress/tests?p=cypress/integration/searchForAnItem.feature:9729:35)]]></failure>
+    </testcase>
+    <testcase name="Search for an item &quot;after each&quot; hook for &quot;Search available watch with a keyword (example #3)&quot;" time="0.0000" classname="&quot;after each&quot; hook for &quot;Search available watch with a keyword (example #3)&quot;">
+      <failure message="Cypress command timeout of `4000ms` exceeded.
+
+Because this error occurred during a `after each` hook we are skipping the remaining tests in the current suite: `Search for an item`" type="CypressError"><![CDATA[CypressError: Cypress command timeout of `4000ms` exceeded.
+
+Because this error occurred during a `after each` hook we are skipping the remaining tests in the current suite: `Search for an item`
+    at cypressErr (https://practice.automationbro.com/__cypress/runner/cypress_runner.js:176336:18)
+    at Object.errByPath (https://practice.automationbro.com/__cypress/runner/cypress_runner.js:176405:10)
+    at https://practice.automationbro.com/__cypress/runner/cypress_runner.js:178159:80]]></failure>
+    </testcase>
+    <testcase name="Search for an item &quot;after all&quot; hook for &quot;Search available watch with a keyword (example #3)&quot;" time="0.0000" classname="&quot;after all&quot; hook for &quot;Search available watch with a keyword (example #3)&quot;">
+      <failure message="Cypress command timeout of `4000ms` exceeded.
+
+Because this error occurred during a `after all` hook we are skipping the remaining tests in the current suite: `Search for an item`" type="CypressError"><![CDATA[CypressError: Cypress command timeout of `4000ms` exceeded.
+
+Because this error occurred during a `after all` hook we are skipping the remaining tests in the current suite: `Search for an item`
+    at cypressErr (https://practice.automationbro.com/__cypress/runner/cypress_runner.js:176336:18)
+    at Object.errByPath (https://practice.automationbro.com/__cypress/runner/cypress_runner.js:176405:10)
+    at https://practice.automationbro.com/__cypress/runner/cypress_runner.js:178159:80]]></failure>
+    </testcase>
+  </testsuite>
+</testsuites>

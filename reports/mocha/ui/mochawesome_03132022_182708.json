@@ -1,0 +1,183 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 5,
+    "passes": 5,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-03-13T18:26:05.744Z",
+    "end": "2022-03-13T18:27:08.196Z",
+    "duration": 62452,
+    "testsRegistered": 5,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "52f9fba2-50b9-45be-9b5f-64a63f762a0e",
+      "title": "",
+      "fullFile": "cypress/integration/fileUpload.feature",
+      "file": "cypress/integration/fileUpload.feature",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "fc790834-96e3-448c-9a0c-a109f4afc34a",
+          "title": "Upload a File",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "User uploads an image file successfully",
+              "fullTitle": "Upload a File User uploads an image file successfully",
+              "timedOut": null,
+              "duration": 13868,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach((step) =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() => state.onFinishScenario(scenario));",
+              "err": {},
+              "uuid": "f31f11ec-53cc-471f-b6d1-9109883ee31a",
+              "parentUUID": "fc790834-96e3-448c-9a0c-a109f4afc34a",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "User uploads binary file to see the upload failed",
+              "fullTitle": "Upload a File User uploads binary file to see the upload failed",
+              "timedOut": null,
+              "duration": 12204,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach((step) =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() => state.onFinishScenario(scenario));",
+              "err": {},
+              "uuid": "d2381527-89ce-4273-84f1-bd5e63bb7388",
+              "parentUUID": "fc790834-96e3-448c-9a0c-a109f4afc34a",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "User uploads file2.jpeg successfully (example #1)",
+              "fullTitle": "Upload a File User uploads file2.jpeg successfully (example #1)",
+              "timedOut": null,
+              "duration": 11171,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach((step) =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() => state.onFinishScenario(scenario));",
+              "err": {},
+              "uuid": "d7881ad5-d06e-46c6-8130-f68530147a06",
+              "parentUUID": "fc790834-96e3-448c-9a0c-a109f4afc34a",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "User uploads file3.pdf successfully (example #2)",
+              "fullTitle": "Upload a File User uploads file3.pdf successfully (example #2)",
+              "timedOut": null,
+              "duration": 12156,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach((step) =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() => state.onFinishScenario(scenario));",
+              "err": {},
+              "uuid": "30139ecf-58f2-4b50-b099-f69886df5bf6",
+              "parentUUID": "fc790834-96e3-448c-9a0c-a109f4afc34a",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "User uploads file4.txt successfully (example #3)",
+              "fullTitle": "Upload a File User uploads file4.txt successfully (example #3)",
+              "timedOut": null,
+              "duration": 12522,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach((step) =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() => state.onFinishScenario(scenario));",
+              "err": {},
+              "uuid": "2f3b1a50-7562-4931-b872-12fbdd796789",
+              "parentUUID": "fc790834-96e3-448c-9a0c-a109f4afc34a",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "f31f11ec-53cc-471f-b6d1-9109883ee31a",
+            "d2381527-89ce-4273-84f1-bd5e63bb7388",
+            "d7881ad5-d06e-46c6-8130-f68530147a06",
+            "30139ecf-58f2-4b50-b099-f69886df5bf6",
+            "2f3b1a50-7562-4931-b872-12fbdd796789"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 61921,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "./reports/mocha/ui",
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "timestamp": "mmddyyyy_HHMMss"
+      },
+      "version": "5.2.0"
+    }
+  }
+}

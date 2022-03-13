@@ -15,5 +15,5 @@ module.exports = {
       TEST_TYPE: `${testType}`
     }
   },
-  toConsole: true
+  toConsole: false
 };

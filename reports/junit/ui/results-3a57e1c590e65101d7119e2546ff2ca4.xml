@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="48.2320" tests="5" failures="0">
+  <testsuite name="Root Suite" timestamp="2022-03-13T19:47:57" tests="0" file="cypress/integration/searchForAnItem.feature" time="0.0000" failures="0">
+    <properties>
+      <property name="TEST_TYPE" value="ui"/>
+    </properties>
+  </testsuite>
+  <testsuite name="Search for an item" timestamp="2022-03-13T19:47:57" tests="5" time="48.2050" failures="0">
+    <properties>
+      <property name="TEST_TYPE" value="ui"/>
+    </properties>
+    <testcase name="Search for an item Search available product from navigation-menu" time="9.3550" classname="Search available product from navigation-menu">
+    </testcase>
+    <testcase name="Search for an item Search unavailable product from navigation-menu" time="8.7930" classname="Search unavailable product from navigation-menu">
+    </testcase>
+    <testcase name="Search for an item Search available camera with a keyword (example #1)" time="9.9060" classname="Search available camera with a keyword (example #1)">
+    </testcase>
+    <testcase name="Search for an item Search available speaker with a keyword (example #2)" time="10.9330" classname="Search available speaker with a keyword (example #2)">
+    </testcase>
+    <testcase name="Search for an item Search available watch with a keyword (example #3)" time="8.8680" classname="Search available watch with a keyword (example #3)">
+    </testcase>
+  </testsuite>
+</testsuites>
