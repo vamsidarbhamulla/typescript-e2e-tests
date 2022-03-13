@@ -1,0 +1,96 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "extends": [
+    "airbnb/base",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:import/errors",
+    "plugin:import/warnings",
+    "plugin:import/typescript",
+    "plugin:prettier/recommended"
+  ],
+  "parserOptions": {
+    "ecmaVersion": 2018,
+    "project": ["./tsconfig.json"]
+  },
+  "plugins": [
+    "prettier",
+    "mocha",
+    "mocha-no-only",
+    "cypress"
+  ],
+  "rules": {
+    "prettier/prettier": ["error"],
+    "semi": ["error", "always"],
+    "object-curly-spacing": ["error", "always"],
+    "camelcase": "off",
+    "no-unused-expressions": "off",
+    "no-use-before-define": ["error", { "functions": false, "classes": true, "variables": true }],
+    "mocha/handle-done-callback": ["error", {"ignoreSkipped": true}],
+    "mocha/no-exclusive-tests": "error",
+    "mocha/no-identical-title": "error",
+    "mocha/prefer-arrow-callback": "warn",
+    "mocha/no-unused-expressions": "off",
+    "mocha/no-exports": "off",
+    "mocha-no-only/mocha-no-only": ["error"],
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "@typescript-eslint/no-explicit-any": 1,
+    "@typescript-eslint/no-inferrable-types": [
+      "warn",
+      {
+        "ignoreParameters": true
+      }
+    ],
+    "no-underscore-dangle": "off",
+    "no-shadow": "off",
+    "no-new": 0,
+    "@typescript-eslint/no-shadow": ["error"],
+    "@typescript-eslint/no-unused-vars": "warn",
+    "quotes": [2, "single", { "avoidEscape": true }],
+    "class-methods-use-this": "off",
+    "import/no-unresolved": "off",
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "js": "never",
+        "ts": "never",
+        "json": "always"
+      }
+    ],
+    "import/no-extraneous-dependencies": ["error", {"devDependencies": true, "optionalDependencies": true, "peerDependencies": true}],
+    "@typescript-eslint/indent": [
+      "error",
+      2,
+      {
+        "ignoredNodes": ["TSTypeParameterInstantiation"]
+      }
+    ]
+  },
+  "env": {
+    "browser": false,
+    "es6": true,
+    "node": true,
+    "mocha": true
+  },
+  "ignorePatterns": ["**/*.json"],
+  "settings": {
+    "import/parsers": {
+      "@typescript-eslint/parser": [".ts", ".js"]
+    },
+    "import/resolver": {
+      "typescript": {},
+      "node": {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"],
+        "moduleDirectory": ["node_modules"]
+      }
+    }
+  },
+  "overrides": [
+    {
+      "files": ["*.test.js", "*.spec.js"],
+      "rules": {
+        "no-unused-expressions": "off"
+      }
+    }
+  ]
+}

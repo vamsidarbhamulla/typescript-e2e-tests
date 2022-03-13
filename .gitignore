@@ -1,0 +1,6 @@
+# cypress
+**/reports
+**/cypress/screenshots
+**/cypress/downloads
+**/cypress/videos
+**/node_modules

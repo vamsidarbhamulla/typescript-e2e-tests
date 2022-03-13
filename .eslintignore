@@ -1,0 +1,4 @@
+**/load/*.js
+**/load/**/*.js
+**/node_modules
+./reporterConfig.js

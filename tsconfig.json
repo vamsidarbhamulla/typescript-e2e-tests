@@ -1,0 +1,46 @@
+{
+  "ts-node": {
+    "files": true
+  },
+  "compilerOptions": {
+    "incremental": true,
+    "target": "es5",
+    "module": "commonjs",
+    "lib": ["es2015", "es2017", "dom"],
+    "allowJs": true,
+    "checkJs": true,
+    "declaration": true,
+    "sourceMap": true,
+    "outDir": "./dist",
+    "noEmit": false,
+    "strict": true,
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "alwaysStrict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "moduleResolution": "node",
+    "typeRoots": ["node_modules/@types"],
+    "types": ["node", "mocha", "chai", "cypress", "cypress-file-upload", "./faker.d.ts"],
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "pretty": true,
+    "skipLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@tests/shared/models": ["libs/shared/models/index.ts"],
+      "@tests/shared/core": ["libs/shared/core/index.ts"]
+    }
+  },
+  "include": [
+    "."
+  ],
+  "exclude": [
+    "node_modules",
+    "dist",
+  ],
+  "compileOnSave": true
+}
