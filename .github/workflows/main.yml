@@ -1,0 +1,62 @@
+name: CI
+
+on: [push, pull_request]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    env:
+      npm_config_cache: ${{ github.workspace }}/.npm
+      CYPRESS_CACHE_FOLDER: ${{ github.workspace }}/cache/Cypress
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+
+      - name: Cache npm
+        uses: actions/cache@v2
+        with:
+          path: .npm
+          key: ${{ runner.os }}-npm-cache-${{ github.ref }}
+          restore-keys: |
+            ${{ runner.os }}-npm-cache-
+
+      - name: Cache Cypress
+        uses: actions/cache@v2
+        with:
+          path: cache/Cypress
+          key: ${{ runner.os }}-cypress-cache-${{ github.ref }}
+          restore-keys: |
+            ${{ runner.os }}-cypress-cache-
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Print CI environment variables
+        run: $(npm bin)/print-env CI
+
+      - name: Run API tests
+        run: npm run api-test
+
+      - name: Verify Cypress
+        run: npm run cy:verify
+
+      - name: Run UI tests
+        run: npm run ui-test
+
+      - name: Upload Cypress artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: cypress-videos
+          path: cypress/videos
+
+      - name: Upload Cypress screenshots
+        uses: actions/upload-artifact@v2
+        with:
+          name: cypress-screenshots
+          path: cypress/screenshots
