@@ -11,15 +11,15 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       - name: Set up Node.js
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v4
         with:
           node-version: '14'
 
       - name: Cache npm
-        uses: actions/cache@v2
+        uses: actions/cache@v4
         with:
           path: .npm
           key: ${{ runner.os }}-npm-cache-${{ github.ref }}
@@ -27,7 +27,7 @@ jobs:
             ${{ runner.os }}-npm-cache-
 
       - name: Cache Cypress
-        uses: actions/cache@v2
+        uses: actions/cache@v4
         with:
           path: cache/Cypress
           key: ${{ runner.os }}-cypress-cache-${{ github.ref }}
@@ -50,13 +50,13 @@ jobs:
         run: npm run ui-test
 
       - name: Upload Cypress artifacts
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         with:
           name: cypress-videos
           path: cypress/videos
 
       - name: Upload Cypress screenshots
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         with:
           name: cypress-screenshots
           path: cypress/screenshots
